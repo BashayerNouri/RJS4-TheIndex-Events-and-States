@@ -5,7 +5,11 @@ import AuthorCard from "./AuthorCard";
 
 function AuthorsList(props) {
   const authorCards = props.authors.map(author => (
-    <AuthorCard key={author.first_name + author.last_name} author={author} />
+    <AuthorCard
+      selectAuthor={props.selectAuthor}
+      key={author.first_name + author.last_name}
+      author={author}
+    />
   ));
 
   return (
